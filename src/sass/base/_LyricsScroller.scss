@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as *;
+
+body {
+  margin: 0;
+  max-height: 100svh;
+  display: flex;
+  align-items: center;
+  font-family: 'Gotham Rounded Bold';
+  background-color: $secondary-color;
+}
+
+#root {
+  position: relative;
+  margin: 0 auto;
+  width: min(100vw, 1024px);
+  height: clamp(768px, 100vh, 890px);
+  border: 1px solid gray;
+}
+
+.lyrics-container {
+  padding: 10%;
+  max-height: 100%;
+  overflow-y: scroll;
+  font-size: clamp(2rem, 3rem, 4rem);
+  line-height: 1.5em;
+  white-space: pre-line;
+  border: 1px solid gray;
+  background-color: $lyrics-background-4;
+}
+
+.controls {
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+  display: flex;
+  align-items: flex-end;
+  gap: 2em;
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .controls-button {
+      width: clamp(3rem, 5rem, 6rem);
+      height: clamp(3rem, 5rem, 6rem);
+      border-radius: 0.25em;
+      border: none;
+      font-size: 3rem;
+      font-weight: bold;
+      background-color: $secondary-color;
+      color: $text-color-light;
+      box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+    }
+  }
+  p {
+    font-size: clamp(1.5rem, 3.5rem, 4.5rem);
+    margin: 0;
+    color: $text-color-light;
+  }
+  
+}
+
+.play-button {
+  position: absolute;
+  width: clamp( 5.5rem, 7.5rem, 8.5rem);
+  height: clamp( 5.5rem, 7.5rem, 8.5rem);
+  border-radius: 100%;
+  background-color: $accent-color;
+  border: none;
+  color: $text-color-light;
+  font-size: xx-large;
+  font-weight: bold;
+  bottom: 5%;
+  right: 7%;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+}
+
+
